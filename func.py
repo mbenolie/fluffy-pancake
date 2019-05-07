@@ -1,7 +1,6 @@
 #
-# Copyright (c) 2016, 2019, Oracle and/or its affiliates. All rights reserved.
 #
-# Author: Michel Benoliel michel.benoliel@oracle.com
+# Author: Michel Benoliel
 #
 # Description: a python Fn function triggered by a CreateSubnet audit event
 #              the function checks that the subnet was created with a free_form tag named "owner", 
@@ -109,7 +108,6 @@ def handler(ctx, data: io.BytesIO=None):
                 topic_id = ensure_env_var("ALERTS_TOPIC_ID")
                 onsMessage = oci.ons.models.MessageDetails()
                 onsMessage.body = responseText  
-                print (topic_id)
                 ons_client.publish_message(topic_id, onsMessage)
 
             logging.info (responseText )
