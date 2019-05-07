@@ -25,14 +25,17 @@ The python sample looks for AuditEvents with eventName = "CreateSubnet"  and che
 <div class="highlight highlight-source-shell"><pre>
 
 <ul>
-<li> Create a notification topic and name it "AuditAlerts" and write down the topic ocid, as you will use it to define the configuration  variable "ALERTS_TOPIC_ID" <br>
+<li> Create a notification topic and name it "AuditAlerts" and write down the topic ocid, as you will use it in your function configuration <br>
   <div class="highlight highlight-source-shell"><pre>
       $ oci ons topic create --name CloudEventsAlerts --compartment-id your_compartment_id
       </pre></div>
 </li>
-<li> Subscribe to the topic with   protocol=Email  <br><br>
+<li> Subscribe to the topic with   protocol=Email  <br>
   <div class="highlight highlight-source-shell"><pre>
-      $ oci ons subscription  create --protocol email --subscription-endpoint michel.benoliel@oracle.com --topic-id your_topic_id --compartment-id your_compartment_id
+      $ oci ons subscription  create --protocol email \
+        --subscription-endpoint michel.benoliel@oracle.com \
+        --topic-id your_topic_id \
+        --compartment-id your_compartment_id
       </pre></div>
   </li>
 </ul>
@@ -44,7 +47,12 @@ The python sample looks for AuditEvents with eventName = "CreateSubnet"  and che
 You can create the Events rule in the Events service console or using the OCI CLI
 <div class="highlight highlight-source-shell"><pre>
 
-      $ oci cloud-events rule create --display-name CreateSubnetRule --compartment-id your-compartment  --is-enabled true  --condition eventName:CreateSubnet --actions file://actions.json
+      $ oci cloud-events rule create \
+          --display-name CreateSubnetRule \
+          --compartment-id your-compartment  \
+          --is-enabled true  \
+          --condition eventName:CreateSubnet \
+          --actions file://actions.json
       
       the actions.json file defines the action triggered by the rule and looks like:
       
