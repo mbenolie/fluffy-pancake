@@ -11,12 +11,13 @@
   <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
     </head>
     <body>
-# Fn Audit-Events-ONS Integration 
+# Fn OCI Resource Configuration Governance using Events, Notifications and Audit Service 
 
 
 <p><b>Details</b><p>
-    Audit events emitted by the OCI Audit service are wired into the OCI Events service which then trigger an OCI Fucntion to analyse the Audit event. 
-  The python sample looks for AuditEvents with evntName = "CreateSubnet"  and checks if the subnet was created with a free form tag named "owner". If not, it publishes a message on the OCI Notifiction topic.
+The sample use a Python OCI Function to make sure that a Subnet was created with the right tags.
+When a subnet is created an Audit event is automatically  emitted by the OCI Audit service to the OCI Events service. A rule within Events triggers an OCI Fucntion to  analyse the Audit event. 
+The python sample looks for AuditEvents with eventName = "CreateSubnet"  and checks if the subnet was created with a free form tag named "owner". If not, it publishes a message on the OCI Notifiction topic. The sample can be easily extended to monitor other event types.
 
 <h2><a id="user-content-deployment" class="anchor" aria-hidden="true" href="#deployment"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h2>
 <p><b>Configure the Notifications Service</b></p>
