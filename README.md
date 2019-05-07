@@ -25,12 +25,13 @@ The python sample looks for AuditEvents with eventName = "CreateSubnet"  and che
 <div class="highlight highlight-source-shell"><pre>
 
 <ul>
-<li> Create a notification topic and name it "AuditAlerts" and write down the topic ocid, as you will use it in your function configuration <br>
+<li> Create a notification topic and name it "AuditAlerts" and write down the topic ocid, as you wil
+     use it in your function configuration
   <div class="highlight highlight-source-shell"><pre>
       $ oci ons topic create --name CloudEventsAlerts --compartment-id your_compartment_id
       </pre></div>
 </li>
-<li> Subscribe to the topic with   protocol=Email  <br>
+<li> Subscribe to the topic with   protocol=Email
   <div class="highlight highlight-source-shell"><pre>
       $ oci ons subscription  create --protocol email \
         --subscription-endpoint michel.benoliel@oracle.com \
