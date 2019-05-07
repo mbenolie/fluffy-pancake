@@ -43,7 +43,8 @@ The python sample looks for AuditEvents with eventName = "CreateSubnet"  and che
 <p><b>Configure the events Service</b></p>
 
 You can create the Events rule in the Events service console or using the OCI CLI
-<div class="highlight highlight-source-shell"><pre>
+<div class="highlight highlight-source-shell">
+  <pre>
 
       $ oci cloud-events rule create \
           --display-name CreateSubnetRule \
@@ -51,10 +52,10 @@ You can create the Events rule in the Events service console or using the OCI CL
           --is-enabled true  \
           --condition eventName:CreateSubnet \
           --actions file://actions.json
-      
-      the actions.json file defines the action triggered by the rule and can be found <a href="https://github.com/mbenolie/oci-fn-audit-events/blob/master/actions.json">here</a>
-    </pre>
-</div>
+       </pre>
+</div>   
+      <p>the actions.json file defines the action triggered by the rule and can be found <a href="https://github.com/mbenolie/oci-fn-audit-events/blob/master/actions.json">here</a></p>
+
 <p><b>Required function configuration:</b></p>
 <ul>
 <li>OCI_USER - OCI user</li>
