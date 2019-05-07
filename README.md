@@ -11,11 +11,12 @@
   <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
     </head>
     <body>
-# Fn OCI Resource Configuration Governance using Events, Notifications and Audit Service 
+# OCI Resource Configuration Governance using Events, Notifications, Audit and Functions Services
 
 
 <p><b>Details</b><p>
-The sample use a Python OCI Function to make sure that a Subnet was created with the right tags.
+The sample demonstrates the combination of 4 different OCI services to monitor OCI resource configuration. Specifically it checks in near real time whether a subnet was created wit the correct tags and if not alerts an administrator.
+  
 When a subnet is created an Audit event is automatically  emitted by the OCI Audit service to the OCI Events service. A rule within Events triggers an OCI Fucntion to  analyse the Audit event. 
 The python sample looks for AuditEvents with eventName = "CreateSubnet"  and checks if the subnet was created with a free form tag named "owner". If not, it publishes a message on the OCI Notifiction topic. The sample can be easily extended to monitor other event types.
 
