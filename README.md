@@ -52,19 +52,8 @@ You can create the Events rule in the Events service console or using the OCI CL
           --condition eventName:CreateSubnet \
           --actions file://actions.json
       
-      the actions.json file defines the action triggered by the rule and looks like:
-      
-      [
-        {
-          "actionType": "FAAS",
-          "description": "trigger function",
-          "functionId": "your_function_id",
-          "isEnabled": true
-        }
-      ]
-
-
-  </pre>
+      the actions.json file defines the action triggered by the rule and can be found <a href="https://github.com/mbenolie/oci-fn-audit-events/blob/master/actions.json">here</a>
+    </pre>
 </div>
 <p><b>Required function configuration:</b></p>
 <ul>
