@@ -114,9 +114,13 @@ fn config fn oci create-subnet-event-fn ALERTS_TOPIC_ID <span class="pl-smi">${A
       </div>
   </div>
  
-<p><b>Configure the events Service</b></p>
+<p><b>Create the Events Rule</b></p>
 
-You can create the Events rule in the Events service console or use the python <a href="https://github.com/mbenolie/oci-fn-audit-events/blob/master/scripts/createEventRule.py">script</a></p>
+You can create the Events rule in the Events service console
+
+<p><a target="_blank" rel="noopener noreferrer" href="/abhirockzz/oracle-functions-hello-worlds/blob/master/images/create-application.jpg"><img src="./images/rule.jpg" alt="" title="Create Rule" style="max-width:100%;"></a></p>
+
+or use the python <a href="https://github.com/mbenolie/oci-fn-audit-events/blob/master/scripts/createEventRule.py">script</a></p>
 <div class="highlight highlight-source-shell">
   <pre>
      python3.7 createEventrule.py  --rule_name your_rule_name --function_id your_function_id
