@@ -1,8 +1,0 @@
-[
-  {
-    "actionType": "FAAS",
-    "description": "trigger function",
-    "functionId": "your_function_id",
-    "isEnabled": true
-  }
-]
