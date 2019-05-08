@@ -55,14 +55,15 @@ The python sample looks for AuditEvents with eventName = "CreateSubnet"  and che
 </ul>
 
 
-<p>Test code locally</p>
+<p><b>Test code locally</b></p>
 Install pytest:
 
     python3 -m venv .venv
     source .venv/bin/activate
     pip3 install -r requirements.txt pytest
     
-Install OCI Python SDK
+Install OCI Python SDK:
+
     make sure you have oci-python-sdk-2.2.1+preview.1.721
     
 <p>Run tests:</p>
