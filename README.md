@@ -40,16 +40,7 @@ The python sample looks for AuditEvents with eventName = "CreateSubnet"  and che
 </ul>
 
 
-<p><b>Configure the events Service</b></p>
 
-You can create the Events rule in the Events service console or use the python <a href="https://github.com/mbenolie/oci-fn-audit-events/blob/master/scripts/createEventRule.py">script</a></p>
-<div class="highlight highlight-source-shell">
-  <pre>
-     python3.7 createEventrule.py  --rule_name your_rule_name --function_id your_function_id
-    
-   </pre>
-</div>   
-      
 
 <p><b>Required function configuration:</b></p>
 <ul>
@@ -117,7 +108,16 @@ fn config fn oci create-subnet-event-fn ALERTS_TOPIC_ID <span class="pl-smi">${A
       </div>
   </div>
  
+<p><b>Configure the events Service</b></p>
 
+You can create the Events rule in the Events service console or use the python <a href="https://github.com/mbenolie/oci-fn-audit-events/blob/master/scripts/createEventRule.py">script</a></p>
+<div class="highlight highlight-source-shell">
+  <pre>
+     python3.7 createEventrule.py  --rule_name your_rule_name --function_id your_function_id
+    
+   </pre>
+</div>   
+      
 <p><b>Test the whole scneario</b></p>
  <div class="highlight highlight-source-shell"><pre>
  <ul>
