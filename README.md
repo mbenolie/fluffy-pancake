@@ -54,7 +54,7 @@ The python sample looks for AuditEvents with eventName = "CreateSubnet"  and che
 <li>OCI_PRIVATE_KEY_PASS - OCI user private key pass phrase</li>
 <li>ALERTS_TOPIC_ID - ONS  topic Id, to publish alerts</li>  
 </ul>
-
+<p>Code available <a href="https://github.com/mbenolie/oci-fn-audit-events/blob/master/create-subnet-event-fn">here</a>.</p>
 
 <p><b>Test code locally</b></p>
 Install pytest:
