@@ -62,6 +62,8 @@ Install pytest:
     source .venv/bin/activate
     pip3 install -r requirements.txt pytest
     
+    make sure you have the <a href="https://publicdocs-corp.documents.us2.oraclecloud.com/documents/fileview/DDC853A9F7622CCCD5FACB46F6C3FF17C1177E4725F3">OCI Python SDK 2.21+preview </a> installed
+    
 <p>Run tests:</p>
 
 pytest -v -s --tb=long func.py
