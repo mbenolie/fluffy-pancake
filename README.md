@@ -11,7 +11,8 @@
   <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
     </head>
     <body>
-# OCI Resource Configuration Governance using Events, Notifications, Audit and Functions Services
+
+<p>OCI Resource Configuration Governance using Events, Notifications, Audit and Functions Services</p>
 
 
 <p><b>Details</b><p>
